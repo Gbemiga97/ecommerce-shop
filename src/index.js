@@ -3,15 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ProductContextProvider } from './contexts';
+import { CartContextProvider, ProductContextProvider, SideBarContextProvider } from './contexts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <SideBarContextProvider>
+  <CartContextProvider>
   <ProductContextProvider> 
   <React.StrictMode>
     <App />
   </React.StrictMode>
   </ProductContextProvider>
+  </CartContextProvider> 
+  </SideBarContextProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

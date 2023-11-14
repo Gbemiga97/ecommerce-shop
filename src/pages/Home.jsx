@@ -1,5 +1,6 @@
 import { Product } from "../components"
 import { useProductContext } from "../contexts"
+import { Hero } from "../sections"
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
   
   return (
     <div>
+      <Hero />
       <section className="py-16">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[1.8rem]
