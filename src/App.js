@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { Home, ProductDetails } from "./pages";
 import { Footer, Header, SideBar } from "./components";
 
@@ -6,7 +6,7 @@ import { Footer, Header, SideBar } from "./components";
 function App() {
   return (
     <div className="overflow-hidden">
-     <BrowserRouter>
+     <HashRouter>
      <Header />
      <Routes>
       <Route path='/' element={<Home />} />
@@ -14,7 +14,7 @@ function App() {
      </Routes>
      <SideBar />
      <Footer />
-     </BrowserRouter>
+     </HashRouter>
     </div>
   );
 }
